@@ -34,9 +34,9 @@ def rockPaperScissor():
             scoreA += 1
         print("The score is:", scoreA, " - ", scoreB)
     if scoreB == 3:
-        print("###You lost###", scoreA, " - ", scoreB)
+        print("\n\n### You lost ###", scoreA, " - ", scoreB)
     elif scoreA == 3:
-        print("###You won###", scoreA, " - ", scoreB)
+        print("\n\n### You won ###", scoreA, " - ", scoreB)
 
 
 rockPaperScissor()
