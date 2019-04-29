@@ -8,6 +8,7 @@ def rockPaperScissor():
     while scoreA < 3 and  scoreB < 3:
         playerIn = input("Choose one: 'rock', 'paper', 'scissor': ")
         computerIn = result[random.randint(0, 2)]
+        playerIn = playerIn.lower()
         if playerIn == computerIn:
             print(playerIn, " x ", computerIn)
             print("It's a tie.")
@@ -29,6 +30,8 @@ def rockPaperScissor():
         elif playerIn == "scissor" and computerIn == "paper":
             print(playerIn, " x ", computerIn)
             scoreA += 1
+        else:
+            print("Wrong input.")
         print("The score is:", scoreA, " - ", scoreB)
     if scoreB == 3:
         print("You lost", scoreB, " - ", scoreA)
