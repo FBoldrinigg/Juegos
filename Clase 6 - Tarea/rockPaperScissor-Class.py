@@ -3,15 +3,14 @@ import random
 
 class rockPaperScissor:
 
-    playerIn = ""
-    computerIn = ""
-
     def __init__(self):
         self.scoreA = 0
         self.scoreB = 0
         self.result = ("rock", "paper", "scissor")
+        self.playerIn = ""
+        self.computerIn = ""
 
-    def winner(self):
+    def scoreUp(self):
         if self.playerIn == self.computerIn:
             print(self.playerIn, " x ", self.computerIn)
             print("It's a tie.")
@@ -50,7 +49,7 @@ class rockPaperScissor:
             if self.playerIn not in self.result:
                 print("Wrong input.")
             else:
-                self.winner()
+                self.scoreUp()
                 print("Player ", self.scoreA, " - ", self.scoreB, " Computer")
         self.gameOverText()
 

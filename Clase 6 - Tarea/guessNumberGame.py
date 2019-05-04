@@ -11,14 +11,14 @@ def guessGame():
             print("Wrong input, ", guess, " is not a number between 1 and 100")
             guess = int(input("Guess again: "))
         if guess == randomNum:
-            print("Congratulations you guessed correctly in: ", abs(10 - tries), "tries.")
+            print("Congratulations you guessed correctly in: ", 10 - tries, "tries.")
             break
         elif guess > randomNum:
             print("The random number is smaller than ", guess)
         else:
             print("The random number is bigger than ", guess)
-
-    print("Game over. You ran out of tries, the number was: ", randomNum)
+    if not tries:
+        print("Game over. You ran out of tries, the number was: ", randomNum)
 
 
 guessGame()
